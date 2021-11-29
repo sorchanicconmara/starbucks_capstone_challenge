@@ -51,6 +51,8 @@ Q14. What offer types were most popular across genders and membership years?
 
 Following on from this, I train a supervised propensity model to predict the propensity of a customer completing an offer WITHOUT any influence from the app versus a customer completing an offer as a direct result of viewing an offer from the app (influenced). Ideally, a model such as the one in this notebook would be used to help to identify which customers would be most responsive to receiving an offer and would be likely to view it and complete it. It would also help to identify those customers likely to complete the offer regardless and therefore wouldn't necessarily need to receive the offer.
 
+The result is a LightGBM classifier which returns an accuracy score of 0.74.
+
 ---
 ### File Structure:
 
