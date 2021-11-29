@@ -119,30 +119,17 @@ positives and negatives into account with equal weight.
 The final best model this project produced was a LightGBM classifier which returned an accuracy score of 0.74.
 
 
-<div style="width:50%; float:left">
-
 When we look at the confusion matrix, we  can see that had:
-
+  
 - **True Positive:**&emsp;&emsp;&emsp;4846
-
-
+  
 - **True Negative:**&emsp;&emsp;&ensp;1269
   
-
 - **False Positive:**&emsp;&emsp;&emsp;903
   
-
 - **False Negative:**&emsp;&emsp;1278
 
-</div>
-
-<div style="width:50%; float:right">
-
-![image](images/conf_matrix.png)
-</div>
-
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-
+![image](images/conf_matrix.png) 
 
 In the case of our data, a false positive implies that a customer was incorrectly classified as having completed an offer after viewing it when they did not.
 A false negative implies that a customer was incorrectly classified as having completed an offer without viewing it beforehand when they did view the offer before completing it.
@@ -528,8 +515,6 @@ plot_conf_mat(y_test, y_pred)
 
 **Confusion Matrix:**
 
-<div style="width:50%; float:left">
-
 When we look at the confusion matrix, we  can see that had:
 
 - **True Positive:**&emsp;&emsp;&emsp;4846
@@ -543,19 +528,14 @@ When we look at the confusion matrix, we  can see that had:
 
 - **False Negative:**&emsp;&emsp;1278
 
-</div>
-
-<div style="width:50%; float:right">
-
 ![image](images/conf_matrix.png)
-</div>
-
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
 **Important Features:**
 
 ![image](images/feat_importances.png)
+
 The 3 most important features in this model were the **time in hours since the start of the test**, the **customer's tenure in months** and the **age group** of the customer.
+
 ---
 ### Justification
 
@@ -642,6 +622,7 @@ Interestingly, I learned several unexpected things from exploring the Starbucks 
 
 Overall, the experience gained from data wrangling, data exploration, 
 data visualisation, feature engineering, data encoding, data scaling, model development and model evaluation has undoubtedly benefitted me and helped me to improve my skills as an aspiring data scientist.
+
 ---
 ### Improvement
 
