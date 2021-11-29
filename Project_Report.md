@@ -192,12 +192,29 @@ The following summary describes the chaarcteristics of the datasets obtained fro
 - 2017 was the busiest year in terms of new memberships, and overall, memberships were steady month by month over the years.
 
 ![image](images/age_dist_bucketed.png)
+
+The majority of Starbucks customers in the dataset were in the 55-64 year age group. Overall, customers aged 45-75 accounted for ~52% of the dataset.
+
 ![image](images/gender_dist.png)
+
+~50% of customers are male, ~36% are female, ~1.25% are 'other' and ~12.75% are unknown.
+
 ![image](images/income_dist_age.png)
+
+Unsurprisingly, customers aged 18-44 have lower incomes on average than those ages 44+. This is likely due to years in a career/industry and potential career progression with age.
+
 ![image](images/income_dist_gender.png)
 ![image](images/income_dist_gender2.png)
+
+The income distribution by gender is quite interesting. We can see from the plots above that the average income of Starbucks customers is higher for females than for males. The distribution of female incomes is also wider and less-skewed than the male income distribution. Both male and female incomes range from 30k to 120k.
+
 ![image](images/tenure_dist.png)
+
+The majority of customers had a tenure of between 6-11 months, so a lot of these customers were relatively new to the Starbucks membership programme.
+
 ![image](images/membership_years_months.png)
+
+2017 saw a relatively large spike in memberships compared to 2016 (up ~50%). There was possibly a campaign to drive memberships that year. Overall, memberships are steady across each month over the years. However, August is the most popular month for new memberships overall.
 
 #### 2. Transcript Data:
 - There are 306,534 transcript records.
@@ -219,11 +236,22 @@ The following summary describes the chaarcteristics of the datasets obtained fro
 - No missing values.
 
 ![image](images/event_type_dist.png)
+
+The most common events in the transcript data were transactions, followed by offers received, offers viewed and offers compelted. This makes sense as we would not expect all customers who receive an offer to view it, nor would we expect all customers who view an offer to complete it. Ideally, a model such as the one in this notebook would be used to help to identify which customers would be most responsive to receiving an offer and would be likely to view it and complete it.
+
 ![image](images/days_since_test_start_dist.png)
+
+When we look at the distribution of time (converted to days) since test start, we can see clear spikes on days 0,7,14,21, etc. which suggests that the tests perhaps commence weekly or that there is clear scheduling behind receiving offers and completing offers.
+
 ![image](images/transaction_amounts_dist.png)
 ![image](images/mean_total_transaction_amounts.png)
 ![image](images/transactions_per_cust.png)
+
+As expected, the distribution of transaction amounts is very skewed. This makes sense as Starbucks is a coffee shop and therefore we would not expect many large transactions from customers. From examining the distribution of mean transaction amounts per customer and the distribution of total transaction amounts per customer, we can also see that Starbucks transactions are primarily comprised of multiple smaller transactions. This likely lends to their membership offers.
+
 ![image](images/mean_spend_and_transactions_by_gender.png)
+
+On average, females spent the most even though they were only the second largest gender group in the customer dataset. The mean spend for 'others' was quite high as well but this is likely very skewed as the proportion of 'others' in the dataset is the smallest of the four gender categories defined.
 
 #### 3. Portfolio Data:
 - 10 unique offers in the portfolio of offers.
@@ -234,9 +262,24 @@ The following summary describes the chaarcteristics of the datasets obtained fro
 - The most popular channels for informational offers were email and mobile.
 
 ![image](images/offer_types_by_channels.png)
+
+- The most popular channels for bogo offers were email and mobile.
+- The most popular channels for discount offers were email and web.
+- The most popular channels for informational offers were email and mobile.
+
 ![image](images/duration_reward_difficulty.png)
+
+The most common duration of offers was 7 days (1 week) which coincides with the spike in 'days since test start' we saw earlier. Most rewards for offers were 5, 0 or 2 dollars and the most common difficulty was $10. This most common difficulty was to be expected as it allows Starbucks to make these membership offers profitable and worth the company's while.
+
 ![image](images/offer_types_by_age_income.png)
+
+As to be expected because of the distribution of ages across the customer dataset, those aged 55-64 completed the most offers and also had the most transactions. The breakdown of events was quite similar across age groups which isn't the most helpful is identifying key traits of a certain age demographic.
+
+Interestingly, below average and average income customers had nearly the same amount of transactions compared to those with above average income. Customers with average income completed the most offers, followed by those with below average income and those with above average income.
+
 ![image](images/offer_types_by_gender_membership_year.png)
+
+Males completed far more transactions than offers compared to females. Also, those missing a gender in the dataset ('Unknown' gender) completed very few offers. Perhaps offers are tailored towards gender and customers missing this datapoint would received generic offers rather than tailored ones. Customers who became members in 2016 and 2017 completed the most offers and transactions. The number of offers completed was steadily increasing from 2013 to 2017 before it dropped in 2018. The strategy for offers/ difficulty possibly changed between 2017 and 2018.
 
 ## III. Methodology
 
